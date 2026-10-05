@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NULL POINTER · Character Select</title>
+  <meta name="description" content="Portfolio nhóm NULL POINTER: 4 thành viên theo phong cách màn hình chọn nhân vật trong game.">
+  <meta name="theme-color" content="#07070F">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Orbitron:wght@700;900&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#app">Bỏ qua tới nội dung</a>
+
+  <div class="fx" aria-hidden="true">
+    <div class="fx-glow"></div>
+    <div class="fx-grid"></div>
+    <div class="fx-lines"></div>
+    <div class="fx-scan"></div>
+    <div class="fx-noise"></div>
+    <div class="fx-vignette"></div>
+  </div>
+
+  <header class="hud">
+    <a class="logo" href="#/"><span class="logo-mark" aria-hidden="true"></span>NULL<b>*</b>PTR</a>
+    <p class="hud-mid label" id="hud-view">CHARACTER SELECT</p>
+    <div class="hud-right">
+      <span class="status label"><i aria-hidden="true"></i>ONLINE</span>
+      <a class="hud-link label" href="#/team">VỀ NHÓM</a>
+      <button class="sound-btn" id="sound" type="button" aria-pressed="false"></button>
+      <button class="sound-btn" id="theme" type="button"></button>
+    </div>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+
+  <div id="boot" role="dialog" aria-modal="true" aria-labelledby="boot-title">
+    <button class="boot-skip label" id="boot-skip" type="button">SKIP ›</button>
+    <div class="boot-inner">
+      <p class="boot-logo" id="boot-title">NULL POINTER</p>
+      <pre class="boot-log" id="boot-log" aria-live="polite"></pre>
+      <div class="boot-row label"><span>INITIALIZING</span><span><span id="boot-pct">0</span>%</span></div>
+      <div class="boot-bar"><span id="boot-fill"></span></div>
+      <button class="btn btn-primary boot-start" id="boot-start" type="button" hidden>
+        <span aria-hidden="true">[</span> ENTER THE TEAM <span aria-hidden="true">]</span>
+      </button>
+    </div>
+  </div>
+
+  <div id="wipe" aria-hidden="true"><span></span></div>
+  <dialog id="dlg" aria-labelledby="dlg-title"></dialog>
+  <div class="reticle" aria-hidden="true"></div>
+  <p id="sr" class="sr-only" aria-live="polite"></p>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
