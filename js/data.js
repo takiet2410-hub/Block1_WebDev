@@ -1,5 +1,7 @@
 /* Sửa file này để thay nội dung — UI tự cập nhật.
-   image: để "" sẽ dùng hologram SVG; muốn dùng ảnh thật thì trỏ tới PNG nền trong suốt (tỉ lệ 4:5.2).
+   Avatar: mặc định là nhân vật 3D (js/avatar3d.js) dựng theo color + id; image: "" giữ nguyên 3D,
+   trỏ tới PNG nền trong suốt (tỉ lệ 4:5.2) nếu muốn thay bằng ảnh.
+   photo: ảnh thật, hiện ở "PLAYER CARD" trong trang hồ sơ (để "" nếu không có).
    lv của skill: 1..5 (NOVICE → EXPERT). */
 
 const TEAM = {
@@ -12,6 +14,12 @@ const TEAM = {
     { key: "SHIP", text: "Đúng hạn, không bỏ dở" },
   ],
   mission: "Building digital experiences together.",
+  quests: [
+    { when: "Q1 · 2025", title: "PARTY FORMED", text: "4 người, 4 class, lập nhóm cho môn Web." },
+    { when: "Q2 · 2025", title: "FIRST RAID", text: "Ship dự án chung đầu tiên đúng deadline." },
+    { when: "Q4 · 2025", title: "LEVEL UP", text: "Mỗi người lên level kỹ năng chính, chia vai rõ ràng." },
+    { when: "NOW", title: "NEW GAME+", text: "Portfolio này — và đang tìm quest tiếp theo." },
+  ],
   email: "nullpointer@example.com",
 };
 
@@ -25,6 +33,8 @@ const CHARACTERS = [
     className: "Interface Ranger",
     color: "#22D3EE",
     image: "",
+    photo: "img/duyanh.png",
+    photoCaption: "Westminster, London",
     tagline: "Giao diện mượt, chạy tốt trên mọi màn hình.",
     bio: "Phụ trách giao diện và hiệu năng phía client.",
     focus: "UI ENG",
