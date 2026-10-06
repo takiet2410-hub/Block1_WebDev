@@ -1,0 +1,18 @@
+{
+	admin off
+	persist_config off
+	storage file_system {
+		root .local/caddy/data
+	}
+}
+
+http://localhost:{$LOCAL_WEB_PORT:8080} {
+	bind 127.0.0.1
+	root * .
+
+	@private path /.git /.git/* /.local /.local/* /.env /.env.* /Caddyfile /*.md /*.ps1 /*.cmd /.gitignore
+	respond @private 404
+
+	encode zstd gzip
+	file_server
+}
